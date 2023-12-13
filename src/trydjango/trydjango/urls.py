@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages.views import home_view,about_view
-from products.views import product_detail_view
+from products.views import product_detail_view,product_form
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name="home"),
     path('about/',about_view,name="about"),
-    path('products/',product_detail_view,name='product_detail')
+    path('products/',product_detail_view,name='product_detail'),
+    path('create/',product_form)
 ]
